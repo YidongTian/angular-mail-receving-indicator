@@ -1,0 +1,29 @@
+<body>
+  <div class="row_major" fxlayout="row" fxlayoutalign="center center">
+    <div>
+      <div class="row_mail_btn" fxlayout="row" fxlayoutalign="center center">
+        <button mat-icon-button class="mat-icon-button" (click)="clear()">
+          <span class="mat-icon-wrapper">
+            <mat-icon role="img" [matBadge]="badgeCounter" [matBadgeHidden]="badgeCounter==0" matBadgeSize="medium">mail_outline</mat-icon>
+          </span>
+          <span matripple class="mat-ripple mat-button-ripple"></span>
+          <span class="mat-button-focus-overlay"></span>
+        </button>
+      </div>
+      <div>
+        <div class="row_start_end_btn" fxlayout="row" fxlayoutalign="center center">
+          <button mat-raised-button color="primary" class="mat-raised-button mat-primary" style="margin-right: 10px" [disabled]="startBtnDisabled" (click)="startBadgeIncre()" #startBtn>
+            <span class="mat-icon-wrapper">Start Receiving</span>
+            <span matripple class="mat-ripple mat-button-ripple"></span>
+            <span class="mat-button-focus-overlay"></span>
+          </button>
+          <button mat-raised-button color="accent" class="mat-raised-button mat-accent mat-button-disabled" [disabled]="stopBtnDisabled" (click)="stopBadgeIncre()" #stopBtn>
+            <span class="mat-icon-wrapper">Stop Receiving</span>
+            <span matripple class="mat-ripple mat-button-ripple"></span>
+            <span class="mat-button-focus-overlay"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
